@@ -8,10 +8,11 @@ function aumentar () {
     }
 }
 
-aumentar()()
+aumentar()() // 1
+aumentar()() // 1
 
 const incrementar = aumentar()
 
-incrementar()
-incrementar()
+incrementar() //1
+incrementar() //2
 

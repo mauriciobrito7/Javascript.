@@ -100,3 +100,4 @@ c(saludos2)
 setTimeout(() =>{
     console.log('Hola Mau')
 }, 3000)
+
