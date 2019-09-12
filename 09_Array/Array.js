@@ -73,3 +73,67 @@ numbers.indexOf(8) // Devuelve la posicion del valor que se esta buscando y si n
 numbers.find( number => number > 100 ) // Devuelve la primera ocurrencia del valor mayor a 100  
 
 numbers.findIndex( number => number > 100 ) // Devuelve el primera ocurrencia del indice del valor mayor a 100
+
+// Eliminar elementos duplicados de un array
+new Set(numbers) /*Pero esto es un objeto*/
+
+// Para convertir el objeto en un array usamos el spread operator (...) para no tener que recorrer el objeto
+/*El spread operator lo que hace es sacar todos los valores del objeto y trabajarlos por separado */
+console.log([ ...new Set(numbers) ]) // al colocarlo entre los corchetes generan un array
+
+// Haremos una función para que nos devuelva un array sin duplicados
+const removeDuplicates = arr => [ ...new Set(arr) ]
+miVector = [1, 2, 1, 0, 0]
+console.log(removeDuplicates(miVector))
+
+// Objeto Math con arrays
+Math.max(...miVector)
+Math.min(...miVector)
+
+// Recorrer un array
+for( let element of miVector){
+    console.log(element)
+}
+
+// forEach()
+/* Lo usamos cuando queremos agregarle una función a cada elemento 
+recibe un callback con dos parametros elemento y el indice, tambien podemos recibir un tercer parametro que es el array
+*/
+
+miVector.forEach( (el, i, arr) => {
+    console.log('Elemento: '+el) // se accede al elemento
+    console.log('Indice: '+i) // indice
+} )
+
+let arr3 = []
+
+miVector.forEach(el => {
+    arr3.push(el * el)
+})
+console.log(arr3)
+
+// .some(callback) every(callback)
+/*Si alguno de los elementos o todos elementos cumplen con una condición */
+miVector.some( el => el === 1) // devuelve true o false
+console.log(arr2.every(el => el.includes('a')))
+
+// .map(callback) 
+/*Transforma todos los elementos del array 
+- crea un nuevo array
+*/
+let newArray = miVector.map( el => el * el )
+console.log('Función con .map(): ' + newArray)
+
+// .filter(callback)
+/*Filtra los elementos que cumplan con la condición 
+-Crea un nuevo array
+*/
+let otherArray = miVector.filter( el => el === 0)
+console.log('Función con .filter(): ' + otherArray)
+
+// .reduce(callback)
+/* Reduce todos los elemtnos a un único valor 
+-Necesita comparar de dos a dos
+*/
+let sum = miVector.reduce( (a,b) => a + b )
+
