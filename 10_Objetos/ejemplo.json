@@ -1,0 +1,16 @@
+{
+    "nombre": "Mauricio",
+    "apellidos": "Brito",
+    "edad": 24,
+    "cursos": [
+        {
+            "id": 5,
+            "nombre": "Javacript"
+        },
+        {
+            "id": 19,
+            "nombre": "Node js"
+        }
+    ]
+
+}

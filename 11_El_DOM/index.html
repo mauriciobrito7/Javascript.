@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dom</title>
+</head>
+<body>
+    <h1 id="title" class="title">El DOM</h1>
+    <!-- El DOM no es parte de la especificación de Javascript 
+        El DOM es una web API
+    -->
+    <ul>
+        <li>Document</li>
+        <li>Object
+            en HTML todo es un objeto (nodo) en el DOM y puede tener hijos
+        </li>
+        <li>Model</li>
+    </ul>
+
+    <h1>Seleccionar nodos</h1>
+    <ul>
+        <h2>Con Id</h2>
+        <li>document.getElementById</li>
+        <h2>Con selectores de CSS</h2>
+        <li>document.querySelector() ó element.querySelector()
+        </li>
+        <li>document.querySelectorAll() ó element.querySelectorAll()</li>
+    </ul>
+
+    <h1>Colecciones</h1>
+    <ul>
+        <li>HTMLCollection</li>
+        <li>NodeList</li>
+        <li>Operaciones con colecciones</li>
+        <li>childnodes</li>
+        <li>children</li>
+
+    </ul>
+
+    <h1>Atributos</h1>
+    <ul>
+        <li>getAttribute</li>
+        <li>setAttribute</li>
+        <li>
+            classList
+            <ul>
+                <li>.add()</li>
+                <li>.remove()</li>
+                <li>.toggle()</li>
+            </ul>
+        </li>
+        <li>id</li>
+        <li>value</li>
+    </ul>
+
+    <h1>Crear elementos</h1>
+    <ul>
+        <li>document.createElement() para crear nuevos elementos</li>
+        <li>appendChild() para introducir un elemento dentro del dom</li>
+    </ul>
+    <script src="scripts.js"></script>
+</body>
+</html>
