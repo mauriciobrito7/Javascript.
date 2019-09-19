@@ -4,6 +4,7 @@ const  sleep = util.promisify(setTimeout) // lo que hace es convertir funciones 
 module.exports = {
     async taskOne() {
         try{
+            // throw new Error('Some error') crear un error
             await sleep(4000)
             return 'ONE VALUE'
 
