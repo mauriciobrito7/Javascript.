@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>El Navegador</title>
+    <style>
+        label{
+            display: block;
+            margin-bottom: .5rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Objeto Window</h1>
+    <p>El objeto window es el objeto de más alto nivel en Javascript en el navegador. En Node Js no existe está el objeto global
+        como el objeto de mayor nivel
+    </p>
+    <h2>Objetos</h2>
+    <ul>
+        <li>console</li>
+        <li>navigator</li>
+        <li>location</li>
+        <li>history</li>
+    </ul>
+    <h2>Métodos</h2>
+    <ul>
+        <li>open()</li>
+        <li>close()</li>
+        <li>alert(message)</li>
+        <li>confirm(message)</li>
+        <li>prompt(message)</li>
+    </ul>
+
+    <h1>Responsive tester</h1>
+    <p>Introduzca los datos de un sitio web para probar probar su versión responsive</p>
+    <form action="#" id="responsive-tester-form">
+        <label>
+            Introduce la URL
+            <input id="url">
+        </label>
+        <label>
+            Introduce el ancho
+            <input id="width">
+        </label>
+        <label>
+            Introduce el alto
+            <input id="height">
+        </label>
+        <button>Pruebalo!</button>
+    </form>
+
+    <h2>Objeto Location</h2>
+    <h4>Propiedades</h4>
+    <ul>
+        <li>href
+            <p>url actual, se puede cambiar para cambiar la página actual</p>
+        </li>
+        <li>host
+            <p>dominio:puerto</p>
+        </li>
+        <li>hostname
+            <p>dominio</p>
+        </li>
+        <li>port
+            <p>puerto</p>
+        </li>
+        <li>protocol
+            <p>protocolo(http, https)</p>
+        </li>
+        <li>origin
+            <p>protocolo + dominio</p>
+        </li>
+        <li>hash
+            <p>#</p>
+        </li>
+        <li>pathname
+            <p>ruta interna luego del dominio</p>
+        </li>
+    </ul>
+
+    <h4>Métodos</h4>
+    <ul>
+        <li>reload()</li>
+        <li>assign(url)</li>
+        <li>replace(url)
+            <p>cambia la página sin guardar en history</p>
+        </li>
+    </ul>
+
+    <h2>Objeto History</h2>
+    <p>Este objeto contiene el historial de navegación de la pestaña incluida la página actual</p>
+    <ul>
+        <li>Propiedades
+            <ul>
+                <li>length
+                    <p>Cantidad de elementos, incluye la página actual</p>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <ul>
+        <li>Métodos
+            <ul>
+                <li>back()</li>
+                <li>forward()</li>
+                <li>go(position)
+                    <p>-1 back, 1 forward</p>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
