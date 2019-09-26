@@ -46,3 +46,42 @@ console.log(location.host)
  if(location.pathname.includes('cursos')){
      document.body.classList.add('cursos-page')
  }
+
+ // Ejecuta una función despues de pasado un tiempo
+ setTimeout(()=>{
+    alert('Hola mundo')
+ }, 2000) // despues de 2 segundos ejecuta esta función
+
+ let contador = 0
+ // Ejecuta una función varias veces cada cierto tiempo
+ const saludarMuchasVeces  = setInterval(() => {
+     contador++
+     console.log(`Hola ${contador} vez`)
+     if(contador == 4){
+         clearInterval(saludarMuchasVeces) // podemos detenerlo con su identificador
+     }
+
+ }, 2000);
+
+ console.log(new Date().toLocaleDateString())
+
+ setInterval(() => {
+     const clock =  document.getElementById('clock')
+        if(clock){
+            clock.textContent = new Date().toLocaleTimeString()
+        }
+ }, 1000);
+
+ const now = new Date()
+ console.log(now)
+
+ const aniversario = new Date(2000,4,21)
+ console.log(`aniversario ${aniversario}`)
+
+ const birthday = new Date(1995,1,9)
+
+ const getSeconds = ms => Math.round(ms / 1000)
+ const getMinutes = ms => getSeconds(ms) / 60
+
+
+ console.log(getMinutes(now - birthday))
